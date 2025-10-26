@@ -10,7 +10,7 @@
             Category
           </div>
           <div class="card-body">
-            <form action="">
+            <form action="#">
             <h5 class="card-title">Add Category</h5>
             <input type="text" class="form-control" name="category" placeholder="Enter Category Name">
             <button type="submit" class="btn btn-primary mt-2">Submit</button>
