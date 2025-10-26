@@ -74,14 +74,14 @@
                     d="M13.125 2.29167L16.0417 5.20834H14.1667C13.5913 5.20834 13.125 4.74197 13.125 4.16667V2.29167Z" />
                 </svg>
               </span>
-              <span class="text">Pages</span>
+              <span class="text">Category</span>
             </a>
             <ul id="ddmenu_2" class="collapse dropdown-nav">
               <li>
-                <a href="settings.html"> Settings </a>
+                <a href="{{ route('add-category') }}"> Add Category </a>
               </li>
               <li>
-                <a href="blank-page.html"> Blank Page </a>
+                <a href="blank-page.html">All Category </a>
               </li>
             </ul>
           </li>
