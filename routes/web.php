@@ -13,9 +13,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //add category
 Route::get('/add-category', [BackendController::class, 'addCategory'])->name('add-category');
+
 //store category
 Route::post('/store-category', [BackendController::class, 'storeCategory'])->name('store-category');
+
 //all category
 Route::get('/all-category', [BackendController::class, 'allCategory'])->name('all-category');
+
 //edit category
 Route::get('/edit-category/{id}', [BackendController::class, 'editCategory']);
+
+//update category
+Route::post('/update-category', [BackendController::class, 'updateCategory'])->name('update-category');

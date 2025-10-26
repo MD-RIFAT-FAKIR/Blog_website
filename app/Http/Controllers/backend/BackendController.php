@@ -51,4 +51,30 @@ class BackendController extends Controller
 
         return view('dashboard.edit_category', compact('category'));
     }
+
+    //update category
+    public function updateCategory(Request $request) {
+
+        $request->validate([
+            'category' => 'required'
+        ]);
+
+        $updateCategory          = new Category;
+        $updateCategory->category = $request->category;
+
+        $count = Category::where('slug', 'like', '%'.Str::slug($request->category).'%')->count();
+
+        if( $count > 0 ) {
+            $count++;
+
+            $updateCategory->slug = Str::slug($request->category)."-".$count;
+        }else{
+            $updateCategory->slug = Str::slug($request->category);
+        }
+
+        $updateCategory->save();
+
+        return redirect('/all-category')->with('success', 'Category Update Successfully');
+
+    }
 }

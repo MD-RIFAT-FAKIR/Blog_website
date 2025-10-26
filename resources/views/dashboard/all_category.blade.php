@@ -2,13 +2,16 @@
 
 @section('content')
 <div class="container mt-4">
-  <div class="row">
-    <div class="col-md-11">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
       <div class="card">
         <div class="card-header">
           All Category
         </div>
-        <table class="table mb-5">
+        @if(session('success'))
+          <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
+        <table class="table mb-5 text-center">
           <thead>
               <td>ID</td>
               <td>Category Name</td>

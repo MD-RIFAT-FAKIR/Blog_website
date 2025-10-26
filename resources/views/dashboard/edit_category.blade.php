@@ -3,14 +3,14 @@
 @section('content')
 
 <div class="container mt-4">
-  <div class="row">
-    <div class="col-md-6">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
       <div class="card">
           <div class="card-header">
             Category
           </div>
           <div class="card-body">
-            <form action="{{ route('store-category') }}" method="post">
+            <form action="{{ route('update-category') }}" method="post">
               @csrf
             <h6 class="card-title">Edit Category</h6>
             @if(session('success'))
