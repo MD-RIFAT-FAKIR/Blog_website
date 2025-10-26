@@ -13,3 +13,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //add category
 Route::get('/add-category', [BackendController::class, 'addCategory'])->name('add-category');
+//store category
+Route::post('/store-category', [BackendController::class, 'storeCategory'])->name('store-category');

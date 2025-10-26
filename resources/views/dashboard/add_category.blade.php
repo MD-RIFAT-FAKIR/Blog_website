@@ -10,9 +10,16 @@
             Category
           </div>
           <div class="card-body">
-            <form action="#">
-            <h5 class="card-title">Add Category</h5>
+            <form action="{{ route('store-category') }}" method="post">
+              @csrf
+            <h6 class="card-title">Add Category</h6>
+            @if(session('success'))
+              <div class="alert alert-success">{{ session('success') }}</div>
+            @endif
             <input type="text" class="form-control" name="category" placeholder="Enter Category Name">
+            @error('category')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             <button type="submit" class="btn btn-primary mt-2">Submit</button>
             </form>
           </div>
