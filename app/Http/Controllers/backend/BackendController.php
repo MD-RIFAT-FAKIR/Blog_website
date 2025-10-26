@@ -36,5 +36,19 @@ class BackendController extends Controller
         $category->save();
 
         return back()->with('success', 'Category Added Successfully .!');
+    }//end store-category
+
+    //all category show
+    public function allCategory() {
+        $categories = Category::get();
+
+        return view('dashboard.all_category', compact('categories'));
+    }//
+
+    //edit category
+    public function editCategory($id) {
+        $category = Category::findOrFail($id);
+
+        return view('dashboard.edit_category', compact('category'));
     }
 }

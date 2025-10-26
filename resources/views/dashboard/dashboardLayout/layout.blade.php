@@ -81,7 +81,7 @@
                 <a href="{{ route('add-category') }}"> Add Category </a>
               </li>
               <li>
-                <a href="blank-page.html">All Category </a>
+                <a href="{{ route('all-category') }}">All Category </a>
               </li>
             </ul>
           </li>
